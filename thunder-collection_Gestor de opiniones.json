@@ -1,0 +1,310 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Gestor de opiniones",
+    "dateExported": "2024-03-01T23:55:32.980Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "144800eb-876f-4e3a-9ae7-4e54590f6651",
+            "name": "Rutas publicas",
+            "containerId": "",
+            "created": "2024-03-01T22:29:43.537Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "06cdd9fe-b597-47fb-afc1-d68df6232ba4",
+            "name": "Comments",
+            "containerId": "",
+            "created": "2024-03-01T22:37:37.295Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "33ad2d7a-66d2-4a86-add8-3b62fa7d912a",
+            "name": "Post",
+            "containerId": "",
+            "created": "2024-03-01T22:37:53.752Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "b9733da3-8641-4f38-b09c-0aacecc3bd57",
+            "colId": "11d76be3-5f1b-49b8-83ec-294e6642ec8a",
+            "containerId": "144800eb-876f-4e3a-9ae7-4e54590f6651",
+            "name": "Register",
+            "url": "/user/registerUser",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-01T22:29:54.244Z",
+            "modified": "2024-03-01T23:33:06.972Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Diego"
+                    },
+                    {
+                        "name": "lastname",
+                        "value": "Estrada"
+                    },
+                    {
+                        "name": "username",
+                        "value": "destrada"
+                    },
+                    {
+                        "name": "password",
+                        "value": "12345678"
+                    },
+                    {
+                        "name": "email",
+                        "value": "destrada@kinal.edu.gt"
+                    },
+                    {
+                        "name": "phone",
+                        "value": "12345678"
+                    },
+                    {
+                        "name": "role",
+                        "value": "CLIENT"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "63914870-8120-4c34-a15f-da0eaaff8661",
+            "colId": "11d76be3-5f1b-49b8-83ec-294e6642ec8a",
+            "containerId": "144800eb-876f-4e3a-9ae7-4e54590f6651",
+            "name": "Login",
+            "url": "/user/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-01T22:29:59.206Z",
+            "modified": "2024-03-01T23:54:55.666Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "account",
+                        "value": "destrada@kinal.edu.gt"
+                    },
+                    {
+                        "name": "password",
+                        "value": "12345678"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "f5ab1d28-f03d-40a0-bfa9-21ceb0408ba7",
+            "colId": "11d76be3-5f1b-49b8-83ec-294e6642ec8a",
+            "containerId": "06cdd9fe-b597-47fb-afc1-d68df6232ba4",
+            "name": "CreateComment",
+            "url": "/comment/comment",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-01T22:38:07.119Z",
+            "modified": "2024-03-01T23:53:19.702Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyNTc1NTczNjA2ZTk0MjJkYmE5MWEiLCJ1c2VybmFtZSI6ImFzZCIsIm5hbWUiOiJhc2QiLCJpYXQiOjE3MDkzMzI0NzksImV4cCI6MTcwOTM0MzI3OX0.t587fIl05i_yRbByfKeFw0brIw1FldRbLVjo5C0AwAU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "comment",
+                        "value": "destradadeasd"
+                    },
+                    {
+                        "name": "post",
+                        "value": "65e259e34dc09e78d007f8ea"
+                    },
+                    {
+                        "name": "user",
+                        "value": "65e265b2a93d99be8b3f9769"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "13f01aed-180d-47a7-b112-1c769c44c0c7",
+            "colId": "11d76be3-5f1b-49b8-83ec-294e6642ec8a",
+            "containerId": "33ad2d7a-66d2-4a86-add8-3b62fa7d912a",
+            "name": "CreatePost",
+            "url": "/post/createPost",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-03-01T22:38:14.621Z",
+            "modified": "2024-03-01T22:42:43.138Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyNTc1NTczNjA2ZTk0MjJkYmE5MWEiLCJ1c2VybmFtZSI6ImFzZCIsIm5hbWUiOiJhc2QiLCJpYXQiOjE3MDkzMzI0NzksImV4cCI6MTcwOTM0MzI3OX0.t587fIl05i_yRbByfKeFw0brIw1FldRbLVjo5C0AwAU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "title",
+                        "value": "Pelotero Señores"
+                    },
+                    {
+                        "name": "category",
+                        "value": "Historia"
+                    },
+                    {
+                        "name": "maintext",
+                        "value": "El pelotero que anota una pelota en el campus"
+                    },
+                    {
+                        "name": "user",
+                        "value": "65e2575573606e9422dba91a"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "1afaece9-c695-4f0c-b5d7-cd7cdc71a13c",
+            "colId": "11d76be3-5f1b-49b8-83ec-294e6642ec8a",
+            "containerId": "33ad2d7a-66d2-4a86-add8-3b62fa7d912a",
+            "name": "UpdatePost",
+            "url": "/post/updatePost/65e259e34dc09e78d007f8ea",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-03-01T22:38:33.915Z",
+            "modified": "2024-03-01T23:17:27.147Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyNTc1NTczNjA2ZTk0MjJkYmE5MWEiLCJ1c2VybmFtZSI6ImFzZCIsIm5hbWUiOiJhc2QiLCJpYXQiOjE3MDkzMzI0NzksImV4cCI6MTcwOTM0MzI3OX0.t587fIl05i_yRbByfKeFw0brIw1FldRbLVjo5C0AwAU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "user",
+                        "value": "65e261b73a956319e777614d"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "6ff2afe5-74ea-4ad0-aff1-76dc9c15589e",
+            "colId": "11d76be3-5f1b-49b8-83ec-294e6642ec8a",
+            "containerId": "33ad2d7a-66d2-4a86-add8-3b62fa7d912a",
+            "name": "DeletePost",
+            "url": "/post/deletePost/65e25a4a4dc09e78d007f8f2",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-03-01T22:38:40.522Z",
+            "modified": "2024-03-01T23:33:51.978Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyNTc1NTczNjA2ZTk0MjJkYmE5MWEiLCJ1c2VybmFtZSI6ImFzZCIsIm5hbWUiOiJhc2QiLCJpYXQiOjE3MDkzMzYwMjAsImV4cCI6MTcwOTM0NjgyMH0.KOpTQLcOFDyDromBaxkD31nC04_6GsUhsj6zw-7fMCc"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "userId",
+                        "value": "65e2575573606e9422dba91a"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "599d6ae9-1562-4ba8-9a83-ab97069e017d",
+            "colId": "11d76be3-5f1b-49b8-83ec-294e6642ec8a",
+            "containerId": "06cdd9fe-b597-47fb-afc1-d68df6232ba4",
+            "name": "DeleteComment",
+            "url": "/comment/deleteComment/65e26113ca7e18b3c7115fce",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2024-03-01T23:39:55.080Z",
+            "modified": "2024-03-01T23:41:11.570Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyNTc1NTczNjA2ZTk0MjJkYmE5MWEiLCJ1c2VybmFtZSI6ImFzZCIsIm5hbWUiOiJhc2QiLCJpYXQiOjE3MDkzMzY0NjEsImV4cCI6MTcwOTM0NzI2MX0.htctnjXoG3zQda0WgsLxU2Xv5FWxjlyTd4A5JsiEz2g"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "userId",
+                        "value": "65e2575573606e9422dba91a"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "04532546-e831-40f5-a1ba-84de3210ee51",
+            "colId": "11d76be3-5f1b-49b8-83ec-294e6642ec8a",
+            "containerId": "06cdd9fe-b597-47fb-afc1-d68df6232ba4",
+            "name": "UpdateComment",
+            "url": "/comment/updateComment/65e26a4ae1244a9302834dbb",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2024-03-01T23:50:18.058Z",
+            "modified": "2024-03-01T23:55:10.722Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyNjViMmE5M2Q5OWJlOGIzZjk3NjkiLCJ1c2VybmFtZSI6ImRlc3RyYWRhIiwibmFtZSI6IkRpZWdvIiwiaWF0IjoxNzA5MzM3Mjk1LCJleHAiOjE3MDkzNDgwOTV9.0hAyXQYXsOUGdbFOedU8sMsOQpRwdiQcl0E3jauIt7M"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "userId",
+                        "value": "65e2575573606e9422dba91a"
+                    },
+                    {
+                        "name": "comment",
+                        "value": "deasreade"
+                    }
+                ]
+            },
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "localhost:2656"
+        }
+    }
+}

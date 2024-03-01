@@ -8,7 +8,7 @@ import helmet from 'helmet'
 import cors from 'cors'
 import { config } from "dotenv" 
 import userRoutes from '../src/user/user.routes.js'
-import commentRoutes from '../src/comments/comment.routes.js'
+import commentRoutes from '../src/comment/comment.routes.js'
 import postRoutes from '../src/post/post.routes.js'
 
 //Configuraciones

@@ -3,16 +3,13 @@
 import { Schema, model } from 'mongoose'
 
 const commentSchema = Schema({
-    title: {
+    comment: {
         type: String,
         required: true
     },
-    category: {
-        type: String,
-        required: true
-    },
-    maintext: {
-        type: String,
+    post: {
+        type: Schema.ObjectId,
+        ref: 'comment',
         required: true
     },
     user: {
@@ -20,9 +17,9 @@ const commentSchema = Schema({
         ref: 'user',
         required: true
     }
-
 }, {
-    versionKey: false 
-})
+    versionKey: false
+}
+)
 
 export default model('comment', commentSchema)
